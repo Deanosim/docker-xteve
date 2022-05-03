@@ -19,7 +19,7 @@ RUN \
 	su-exec \
 	ffmpeg \
 	vlc && \
- sed -i 's/geteuid/getppid/' /usr/bin/vlc
+ sed -i 's/geteuid/getppid/' /usr/bin/vlc && \
  echo "**** install xteve ****" && \
  if [ -z ${XTEVE_VERSION+x} ]; then \
 	XTEVE_VERSION=$(curl -sX GET "https://github.com/SCP002/xTeVe/releases/latest" \
