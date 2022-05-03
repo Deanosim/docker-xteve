@@ -40,5 +40,5 @@ RUN \
 # copy local files
 COPY root/ /
 
-# app runs on port 3000
-EXPOSE 3000
+# app runs on port 34400
+EXPOSE 34400
