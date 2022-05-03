@@ -1,2 +1,2 @@
-# docker-xteve
-xteve, in docker with cron, built upon linuxserver/docker-baseimage-alpine
+# docker-xteve (Work in Progress)
+xteve, in docker with cron, built upon linuxserver.io images
