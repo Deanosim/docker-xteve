@@ -27,7 +27,7 @@ RUN \
  fi && \
  curl -o \
  /tmp/xteve_linux_amd64 -L \
-	"https://github.com/SCP002/xTeVe/releases/download/${WEBAPP_VERSION}/xteve_linux_amd64" && \
+	"https://github.com/SCP002/xTeVe/releases/download/${XTEVE_VERSION}/xteve_linux_amd64" && \
  cp \
  /tmp/xteve_linux_amd64 \
 	/app/ && \
