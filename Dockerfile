@@ -22,12 +22,12 @@ RUN \
  sed -i 's/geteuid/getppid/' /usr/bin/vlc && \
  echo "**** install xteve ****" && \
  if [ -z ${XTEVE_VERSION+x} ]; then \
-	XTEVE_VERSION=$(curl -sX GET "https://github.com/SCP002/xTeVe/releases/latest" \
+	XTEVE_VERSION=$(curl -sX GET "https://github.com/SenexCrenshaw/xTeVe/releases/latest" \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  curl -o \
  /tmp/xteve_linux_amd64 -L \
-	"https://github.com/SCP002/xTeVe/releases/download/${XTEVE_VERSION}/xteve_linux_amd64" && \
+	"https://github.com/SenexCrenshaw/xTeVe/releases/download/${XTEVE_VERSION}/xteve_linux_amd64" && \
  cp \
  /tmp/xteve_linux_amd64 \
 	/app/ && \
