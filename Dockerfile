@@ -28,9 +28,9 @@ RUN \
  curl -o \
  /tmp/xteve-linux-amd64 -L \
 	"https://github.com/SenexCrenshaw/xTeVe/releases/download/v2.5.1/xteve-v2.5.1-linux-amd64.tar.gz" && \
- tar -xvf xteve-linux-amd64
+ tar -xvf /tmp/xteve-linux-amd64 && \
  cp \
- /tmp/xteve_linux_amd64 \
+ xteve \
 	/app/ && \
  echo "**** cleanup ****" && \
  apk del --purge \
