@@ -26,9 +26,9 @@ RUN \
 #	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
 # fi && \
  curl -o \
- /tmp/xteve_linux_amd64 -L \
+ /tmp/xteve-linux-amd64 -L \
 	"https://github.com/SenexCrenshaw/xTeVe/releases/download/v2.5.1/xteve-v2.5.1-linux-amd64.tar.gz" && \
- tar -xvf xteve-v2.5.1-linux-amd64.tar.gz
+ tar -xvf xteve-linux-amd64
  cp \
  /tmp/xteve_linux_amd64 \
 	/app/ && \
