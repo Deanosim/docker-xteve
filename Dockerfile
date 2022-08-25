@@ -21,13 +21,14 @@ RUN \
 	vlc && \
  sed -i 's/geteuid/getppid/' /usr/bin/vlc && \
  echo "**** install xteve ****" && \
- if [ -z ${XTEVE_VERSION+x} ]; then \
-	XTEVE_VERSION=$(curl -sX GET "https://github.com/SenexCrenshaw/xTeVe/releases/latest" \
-	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
- fi && \
+ #if [ -z ${XTEVE_VERSION+x} ]; then \
+#	XTEVE_VERSION=$(curl -sX GET "https://github.com/SenexCrenshaw/xTeVe/releases/latest" \
+#	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
+# fi && \
  curl -o \
  /tmp/xteve_linux_amd64 -L \
-	"https://github.com/SenexCrenshaw/xTeVe/releases/download/${XTEVE_VERSION}/xteve_linux_amd64" && \
+	"https://github.com/SenexCrenshaw/xTeVe/releases/download/v2.5.1/xteve-v2.5.1-linux-amd64.tar.gz" && \
+ tar -xvf xteve-v2.5.1-linux-amd64.tar.gz
  cp \
  /tmp/xteve_linux_amd64 \
 	/app/ && \
